@@ -1,13 +1,13 @@
 <script>
-	export let name;
+	export let dataId;
 </script>
 
-<main>
-	<h1>Hello Kitty: {name}! </h1>
-</main>
+<section>
+	<h1>Hello Kitty!: {dataId} </h1>
+</section>
 
 <style>
-	main {
+	section {
 		text-align: center;
 		padding: 1em;
 		max-width: 240px;
@@ -22,7 +22,7 @@
 	}
 
 	@media (min-width: 640px) {
-		main {
+		section {
 			max-width: none;
 		}
 	}

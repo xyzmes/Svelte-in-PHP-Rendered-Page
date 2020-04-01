@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width,initial-scale=1'>
@@ -13,16 +14,35 @@
 </head>
 
 <body>
-<h1>Svelte PHP</h1>
+	<h1 class="title">Svelte PHP</h1>
 
-<?php
-for ($x = 0; $x <= 10; $x++) {
-   echo <<<EOL
-<div data-id="$x" class="component"></div>
+	<div class="content">
+		<div class="kitty">
+			<h4>Component 1</h4>
+			<?php
+			for ($x = 0; $x <= 5; $x++) {
+				echo <<<EOL
+<div data-id="$x" class="component1"></div>
 EOL;
-}
-?>
+			}
+			?>
+		</div>
 
+		<div class="world">
+			<h4>Component 2</h4>
+
+			<?php
+			for ($x = 0; $x <= 5; $x++) {
+				echo <<<EOL
+<div data-id="$x" class="component2"></div>
+EOL;
+			}
+			?>
+
+		</div>
+
+	</div>
 
 </body>
+
 </html>
