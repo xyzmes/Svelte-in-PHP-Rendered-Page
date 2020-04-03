@@ -1,38 +1,10 @@
-import Component1 from './Component1.svelte';
-import Component2 from './Component2.svelte';
+// Just import the custom web element
+import MyElement from './MyElement.svelte';
 
-/**
- * You can select different classes
- * to render different svelte component
- */
+// customElement: true, is set in rollup.config.js
 
- // Select target classes which are rendered by index.php
-const elements1 = document.querySelectorAll('.component1') 
-const elements2 = document.querySelectorAll('.component2')
+// You can't use regular Svelte components and loop through classes
+// when 'customElement: true' is set in rollup.config.js
 
-// Assign svelte component to each element
-elements1.forEach(el =>{
-	const comp1 = new Component1({
-		target: el,
-		props: {
-			dataId: el.getAttribute('data-id') // get php rendered data-id
-		}
-	});
-})
-
-// Assign svelte component to each element
-elements2.forEach(el =>{
-	const comp2 = new Component2({
-		target: el,
-		props: {
-			dataId: el.getAttribute('data-id') // get php rendered data-id
-		}
-	});
-})
-
-
-
-export default{
-	comp1,
-	comp2
-}
+// Use this for creating reusable web components. 
+// Just rename the created JS file and include it in your projects

@@ -16,6 +16,8 @@ export default {
 	},
 	plugins: [
 		svelte({
+			// Enable web components
+			customElement: true, 
 			// enable run-time checks when not in production
 			dev: !production,
 			// we'll extract any component CSS out into

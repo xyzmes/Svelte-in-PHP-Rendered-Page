@@ -16,29 +16,17 @@
 <body>
 	<h1 class="title">Svelte PHP</h1>
 
+
 	<div class="content">
 		<div class="kitty">
-			<h4>Component 1</h4>
+			<h4>Web Components</h4>
 			<?php
 			for ($x = 0; $x <= 5; $x++) {
 				echo <<<EOL
-<div data-id="$x" class="component1"></div>
+	<my-element data-id="$x-element">Custom component $x </my-element>
 EOL;
 			}
 			?>
-		</div>
-
-		<div class="world">
-			<h4>Component 2</h4>
-
-			<?php
-			for ($x = 0; $x <= 5; $x++) {
-				echo <<<EOL
-<div data-id="$x" class="component2"></div>
-EOL;
-			}
-			?>
-
 		</div>
 
 	</div>

@@ -1,5 +1,5 @@
 
-# Svelte ve PHP Integration
+# Svelte and Server side (PHP) Integration
 
 First install npm dependencies
 
