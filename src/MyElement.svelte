@@ -41,8 +41,9 @@
   <!-- Get the text inside the element vis slot -->
   <!-- Text is rendered in server -->
   <h1>
+	<!-- Default slot -->
     <slot />
   </h1>
-  <p>This is a web component</p>
+  <p>Second slot with id: <slot name="secondslot"></slot></p>
   <button on:click={increment}>Count: {count}</button>
 </section>

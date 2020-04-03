@@ -23,7 +23,10 @@
 			<?php
 			for ($x = 0; $x <= 5; $x++) {
 				echo <<<EOL
-	<my-element data-id="$x-element">Custom component $x </my-element>
+	<my-element>
+	Default Slot: $x 
+	<span slot="secondslot">$x-slot</span>
+	</my-element>
 EOL;
 			}
 			?>
