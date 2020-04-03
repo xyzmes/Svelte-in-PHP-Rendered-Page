@@ -5,6 +5,15 @@
   const increment = () => {
     count += 1;
   };
+
+  export let postid = 0
+
+
+  const showId = () => {
+    alert(`Post id is ${postid}`)
+  };
+
+
 </script>
 
 <style>
@@ -44,6 +53,9 @@
 	<!-- Default slot -->
     <slot />
   </h1>
-  <p>Second slot with id: <slot name="secondslot"></slot></p>
+  <p>Second slot: <slot name="secondslot"></slot></p>
   <button on:click={increment}>Count: {count}</button>
+  <hr>
+  <button on:click={showId}>Show Post ID</button>
+
 </section>

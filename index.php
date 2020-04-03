@@ -23,9 +23,9 @@
 			<?php
 			for ($x = 0; $x <= 5; $x++) {
 				echo <<<EOL
-	<my-element>
+	<my-element postid="$x">
 	Default Slot: $x 
-	<span slot="secondslot">$x-slot</span>
+	<span slot="secondslot">second slot content-$x</span>
 	</my-element>
 EOL;
 			}
